@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour
     public static int numberOfCoins;
     public Text CoinsText;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         gameOver = false;
@@ -23,17 +23,18 @@ public class PlayerManager : MonoBehaviour
         nextLevel = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //hojigdoh vyiin panel
         if (gameOver)
         {
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
         }
-
+        //zoosnii text dairsn zoos +dej hragdn
         CoinsText.text = "Coins: " + numberOfCoins;
 
+        //daraagiin vylv ocih panel
         if (nextLevel)
         {
             Time.timeScale = 0;

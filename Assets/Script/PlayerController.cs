@@ -9,19 +9,16 @@ public class PlayerScript : MonoBehaviour
     public float forwardSpeed;
 
     private int desiredLane = 1; //0:Left 1:middle 2:right
-    public float laneDistance = 4; // the distance between two lanes
+    public float laneDistance = 4; // hoyr egneenii hoorondoh zai
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         direction.z = forwardSpeed;
-
-        //Gather the inputs on which lane  we shoul be
 
         if (DragManager.dragRight)
         {
