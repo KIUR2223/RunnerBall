@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F73AFAF7-C729-D23F-E112-955D166A15CF}</ProjectGuid>
+    <ProjectGuid>{230A9DBF-A9A5-253A-3A7E-CEFC04DF6574}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,6 +60,7 @@
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\Events.cs" />
     <Compile Include="Assets\Script\Coin.cs" />
+    <Compile Include="Assets\Script\DragManager.cs" />
     <Compile Include="Assets\Script\CameraController.cs" />
     <Compile Include="Assets\Script\PlayerManager.cs" />
   </ItemGroup>

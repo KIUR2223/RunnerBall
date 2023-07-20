@@ -23,14 +23,14 @@ public class PlayerScript : MonoBehaviour
 
         //Gather the inputs on which lane  we shoul be
 
-        if (Input.GetMouseButtonDown(KeyCode.RightArrow))
+        if (DragManager.dragRight)
         {
             desiredLane++;
             if (desiredLane == 3)
                 desiredLane = 2;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (DragManager.dragLeft)
         {
             desiredLane--;
             if (desiredLane == -1)
@@ -50,7 +50,7 @@ public class PlayerScript : MonoBehaviour
             targetposition += Vector3.right * laneDistance;
         }
 
-        if (transform.position == targetposition) 
+        if (transform.position == targetposition)
             return;
         Vector3 diff = targetposition - transform.position;
         Vector3 moveDir = diff.normalized * 25 * Time.deltaTime;
@@ -58,6 +58,7 @@ public class PlayerScript : MonoBehaviour
             controller.Move(moveDir);
         else controller.Move(diff);
     }
+
 
     private void FixedUpdate()
     {
@@ -70,5 +71,10 @@ public class PlayerScript : MonoBehaviour
         {
             PlayerManager.gameOver = true;
         }
-    }
+
+        if (hit.transform.tag == "NextLevel")
+        {
+            PlayerManager.nextLevel = true;
+        }
+    }   
 }

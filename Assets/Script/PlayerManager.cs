@@ -7,11 +7,11 @@ public class PlayerManager : MonoBehaviour
 {
     public static bool gameOver;
     public GameObject gameOverPanel;
-
-    public static bool isGameStarted;
-
+    
+    public static bool nextLevel;
+    public GameObject NextLevelPanel;
+    
     public static int numberOfCoins;
-
     public Text CoinsText;
 
     // Start is called before the first frame update
@@ -20,6 +20,7 @@ public class PlayerManager : MonoBehaviour
         gameOver = false;
         Time.timeScale = 1;
         numberOfCoins = 0;
+        nextLevel = false;
     }
 
     // Update is called once per frame
@@ -32,5 +33,11 @@ public class PlayerManager : MonoBehaviour
         }
 
         CoinsText.text = "Coins: " + numberOfCoins;
+
+        if (nextLevel)
+        {
+            Time.timeScale = 0;
+            NextLevelPanel.SetActive(true);
+        }
     }
 }
