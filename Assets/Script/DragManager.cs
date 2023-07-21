@@ -42,7 +42,7 @@ public class DragManager : MonoBehaviour
         }
         #endregion
 
-        //Calculate the distance
+        //zaig tootsoh
         dragDelta = Vector2.zero;
         if (isDraging)
         {
@@ -52,15 +52,14 @@ public class DragManager : MonoBehaviour
                 dragDelta = (Vector2)Input.mousePosition - startClick;
         }
 
-        //Did we cross the distance?
         if (dragDelta.magnitude > 100)
         {
-            //Which direction?
+            //ywah chiglel
             float x = dragDelta.x;
             float y = dragDelta.y;
             if (Mathf.Abs(x) > Mathf.Abs(y))
             {
-                //Left or Right
+                //zvvn eswel baruun
                 if (x < 0)
                     dragLeft = true;
                 else
